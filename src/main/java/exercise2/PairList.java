@@ -96,7 +96,7 @@ public class PairList<F, S> implements Iterable<Pair<F, S>> {
 
       if (!canRemove) throw new IllegalStateException();
 
-      for (int i = nextIndex+1; i < size; ++i) pairs[i-1] = pairs[i];
+      for (int i = nextIndex; i < size; ++i) pairs[i-1] = pairs[i];
       pairs[-- size] = null;
 
       nextIndex --;
